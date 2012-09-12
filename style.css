@@ -45,6 +45,8 @@ body {
 @media screen and (min-width: 600px) {
 	#side {
 		position: fixed;
+		top: 0;
+		left: 0;
 		height: 100%;
 		width: 20%;
 	}
