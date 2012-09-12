@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Isaiah Billingsley</title>
+	<meta name="author" content="Isaiah Billingsley">
+	<meta name="description" content="Personal website of Isaiah Billingsley">
+	<!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE8">
+	<![endif]-->
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300">
+	<link rel="stylesheet" href="style.css">
+	<!--[if lt IE 9]>
+	<script src="s/respond.min.js"></script>
+	<script src="s/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="side">
+		<h1 id="head"><a href="">
+			<img id="logo" src="i/logo.png" alt="" />
+			<img id="title" src="i/title.png" alt="Isaiah Billingsley" />
+		</a></h1>
+		<ul id="nav">
+			<li><a href="#news">News</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#about">About</a></li>
+		</ul>
+	</div>
+	<div id="main">
+		<h2 id="news"><a href="#news">News</a></h2>
+
+		<h3 id="website-launched">
+			<a href="#website-launched">Website launched</a>
+			<time datetime="2012-09-12">September 12, 2012</time>
+		</h3>
+		<p>I was feeling an itch to design something. I decided to make a website for myself. And so here it is. Pretty exciting.</p>
+		<p>There isn't a whole lot to see just yet, but hopefully I will have some neat stuff to show off in the near to not-so-near future.</p>
+
+		<h2 id="projects"><a href="#projects">Projects</a></h2>
+
+		<h3 id="humble-new-tab-page"><a href="#humble-new-tab-page">Humble New Tab Page</a></h3>
+		<p>An extension for Google Chrome&trade;</p>
+		<p><a href="https://chrome.google.com/webstore/detail/mfgdmpfihlmdekaclngibpjhdebndhdj"><img src="i/hntp1.png" alt="screenshot"/></a></p>
+		<p>Redesigned new tab page featuring your bookmarks, apps, most visited, recently closed, and weather in a custom layout.</p>
+		<p><a href="https://chrome.google.com/webstore/detail/mfgdmpfihlmdekaclngibpjhdebndhdj">Get it in the Chrome Web Store</a></p>
+		<p>This extension replaces the default new tab page. Drag and drop folders to create new columns or reorder them. The font, colors, spacing, and more can be customized from the options menu.</p>
+
+		<h2 id="about"><a href="#about">About</a></h2>
+
+		<p>I am a recent graduate of the <a href="http://www.utoronto.ca">University of Toronto</a> in <a href="http://en.wikipedia.org/wiki/Industrial_engineering">Industrial Engineering</a> with a passion for useful, usable software and minimalist design.</p>
+		<p>I worked for <a href="http://www.caseware.com/">CaseWare International</a> from 2010 to 2011 and am currently located in <a href="http://en.wikipedia.org/wiki/Toronto">Toronto</a>.
+
+		<h3 id="contact"><a href="#contact">Contact</a></h3>
+		<p>Send me an <a href="mailto:iza.billingsley@gmail.com">email</a> or find me on <a href="https://facebook.com/ibillingsley">Facebook</a>, <a href="https://plus.google.com/105332662447258815577">Google+</a>, <a href="https://github.com/quodroc">GitHub</a>, or <a href="http://ca.linkedin.com/in/ibillingsley">LinkedIn</a>.</p>
+
+	</div>
+	<script>
+	// use svg images if supported
+	if (document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#BasicStructure', '1.1')) {
+		document.getElementById('logo').src = 'i/logo.svg';
+		document.getElementById('title').src = 'i/title.svg';
+	}
+
+	// nav menu highlight
+	var nav = document.getElementById('nav').children;
+	var headers = document.getElementsByTagName('h2');
+
+	window.onscroll = function(event) {
+		for (var i=0; i<headers.length; i++) {
+			if (i==0 || headers[i].offsetTop < (window.pageYOffset || document.body.scrollTop) + document.documentElement.clientHeight/2) {
+				nav[i].firstChild.className = 'current';
+				if (i>0)
+					nav[i-1].firstChild.className = null;
+			} else
+				nav[i].firstChild.className = null; 
+		}
+	};
+
+	window.onhashchange = function(event) {
+		var current = null;
+		for (var i=0; i<nav.length; i++) {
+			if (nav[i].firstChild.getAttribute('href') === window.location.hash)
+				current = nav[i].firstChild;
+			else
+				nav[i].firstChild.className = null;
+		}
+		if (current)
+			current.className = 'current';
+		else
+			window.onscroll();
+	};
+
+	window.onhashchange();
+	</script>
+</body>
+</html>
