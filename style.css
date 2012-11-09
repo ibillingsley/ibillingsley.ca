@@ -125,8 +125,7 @@ h3 {
 h2:first-child {
 	margin-top: 0.3em;
 }
-h2 a[href^="#"],
-h3 a[href^="#"] {
+h2 a, h3 a {
 	color: inherit;
 }
 p, ul {
@@ -142,8 +141,9 @@ p img {
 	box-sizing: border-box;
 }
 time {
+	display: block;
 	color: #999;
 	font-size: .6em;
-	margin-left: 2em;
+	margin: .5em 0 -0.5em;
 	white-space: nowrap;
 }
