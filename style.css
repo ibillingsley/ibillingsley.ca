@@ -11,6 +11,7 @@ body {
 #head, #nav {
 	display: block;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	margin: 0;
 }
 #head {
@@ -148,6 +149,7 @@ img {
 }
 p img {
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 time {
 	display: block;
