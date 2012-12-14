@@ -52,7 +52,7 @@ body {
 		width: 20%;
 	}
 	#head {
-		padding: 25% 0 8%;
+		padding: 25% 0 12%;
 	}
 	#main {
 		position: relative;
@@ -73,29 +73,29 @@ body {
 		background: #444;
 	}
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
 	#side {
-		width: 35%;
+		width: 32%;
 	}
 	#head {
 		height: 100%;
-		width: 57.1428571429%;
+		width: 62.5%;
 	}
 	#nav {
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 42.8571428571%;
+		width: 37.5%;
 	}
 	#head, #nav {
-		padding: 14.2857142857% 0;
+		padding: 16% 0;
 	}
 	#main {
-		width: 55%;
-		left: 35%;
+		width: 58%;
+		left: 32%;
 	}
 	#nav a {
-		padding: 0 26.66666666%;
+		padding: 0 30%;
 	}
 }
 a {

@@ -75,7 +75,7 @@
 
 	window.onscroll = function(event) {
 		for (var i=0; i<headers.length; i++) {
-			if (i==0 || headers[i].offsetTop < (window.pageYOffset || document.body.scrollTop) + document.documentElement.clientHeight/2) {
+			if (i===0 || headers[i].offsetTop < (window.pageYOffset || document.body.scrollTop) + document.documentElement.clientHeight/2) {
 				nav[i].firstChild.className = 'current';
 				if (i>0)
 					nav[i-1].firstChild.className = null;
