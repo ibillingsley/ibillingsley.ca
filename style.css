@@ -73,7 +73,7 @@ body {
 		background: #444;
 	}
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1280px) {
 	#side {
 		width: 32%;
 	}
@@ -154,7 +154,6 @@ p img {
 time {
 	display: block;
 	color: #999;
-	font-size: .6em;
-	margin: .5em 0 -0.5em;
+	margin: -1.1em 0 1.1em;
 	white-space: nowrap;
 }
