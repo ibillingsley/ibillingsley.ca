@@ -19,8 +19,8 @@
 <body>
 	<div id="side">
 		<h1 id="head"><a href="">
-			<img id="logo" src="i/logo.png" alt="" />
-			<img id="title" src="i/title.png" alt="Isaiah Billingsley" />
+			<img id="logo" src="i/logo.svg" alt="" />
+			<img id="title" src="i/title.svg" alt="Isaiah Billingsley" />
 		</a></h1>
 		<ul id="nav">
 			<li><a href="#news">News</a></li>
@@ -63,10 +63,10 @@
 
 	</div>
 	<script>
-	// use svg images if supported
-	if (document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#BasicStructure', '1.1')) {
-		document.getElementById('logo').src = 'i/logo.svg';
-		document.getElementById('title').src = 'i/title.svg';
+	// use png images if svg not supported
+	if (!document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#BasicStructure', '1.1')) {
+		document.getElementById('logo').src = 'i/logo.png';
+		document.getElementById('title').src = 'i/title.png';
 	}
 
 	// nav menu highlight
@@ -80,7 +80,7 @@
 				if (i>0)
 					nav[i-1].firstChild.className = null;
 			} else
-				nav[i].firstChild.className = null; 
+				nav[i].firstChild.className = null;
 		}
 	};
 
