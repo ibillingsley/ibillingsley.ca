@@ -3,7 +3,6 @@ body {
 	color: #bbb;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 112.5%;
-	font-weight: 300;
 	line-height: 1;
 	margin: 0;
 	padding: 0;
@@ -113,7 +112,7 @@ a:active {
 h1, h2, h3, h4, h5, h6 {
 	color: #ddd;
 	margin: 3em 0 1em;
-	font-weight: 300;
+	font-weight: normal;
 }
 h1 {
 	font-size: 1em;

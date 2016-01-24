@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Isaiah Billingsley</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="Isaiah Billingsley">
 	<meta name="description" content="Personal website of Isaiah Billingsley">
-	<!--[if IE]>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE8">
-	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Isaiah Billingsley</title>
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro">
 	<link rel="stylesheet" href="style.css">
-	<!--[if lt IE 9]>
-	<script src="s/respond.min.js"></script>
-	<script src="s/html5shiv.js"></script>
-	<![endif]-->
 </head>
 <body>
 	<div id="side">
@@ -46,7 +41,7 @@
 		<h2 id="projects">Projects</h2>
 
 		<h3 id="humble-new-tab-page">Humble New Tab Page</h3>
-		<p>An extension for Google Chrome&trade;</p>
+		<p>An extension for Google Chrome</p>
 		<p><a href="https://chrome.google.com/webstore/detail/mfgdmpfihlmdekaclngibpjhdebndhdj"><img src="i/hntp1.png" alt="screenshot"/></a></p>
 		<p>Redesigned new tab page featuring your bookmarks, apps, most visited, recently closed, and weather in a custom layout.</p>
 		<p><a href="https://chrome.google.com/webstore/detail/mfgdmpfihlmdekaclngibpjhdebndhdj">Get it in the Chrome Web Store</a></p>
@@ -55,8 +50,8 @@
 
 		<h2 id="about">About</h2>
 
-		<p>I am a recent graduate of the <a href="http://www.utoronto.ca">University of Toronto</a> in <a href="http://en.wikipedia.org/wiki/Industrial_engineering">Industrial Engineering</a> with a passion for usable software and minimalist design.</p>
-		<p>I am currently employed at <a href="http://www.caseware.com/">CaseWare International</a> in <a href="http://en.wikipedia.org/wiki/Toronto">Toronto</a>.
+		<p>Software developer in <a href="http://en.wikipedia.org/wiki/Toronto">Toronto</a>.
+		<br>Currently employed at <a href="http://www.caseware.com/">CaseWare International</a>.</p>
 
 		<h3 id="contact">Contact</h3>
 		<p>Send me an <a href="mailto:iza.billingsley@gmail.com">email</a> or find me on <a href="https://plus.google.com/105332662447258815577">Google+</a> or <a href="https://github.com/quodroc">GitHub</a>.</p>
@@ -74,11 +69,11 @@
 	var headers = document.getElementsByTagName('h2');
 
 	window.onscroll = function(event) {
-		for (var i=0; i<headers.length; i++) {
-			if (i===0 || headers[i].offsetTop < (window.pageYOffset || document.body.scrollTop) + document.documentElement.clientHeight/2) {
+		for (var i = 0; i < headers.length; i++) {
+			if (i == 0 || headers[i].offsetTop < (window.pageYOffset || document.body.scrollTop) + document.documentElement.clientHeight / 2) {
 				nav[i].firstChild.className = 'current';
-				if (i>0)
-					nav[i-1].firstChild.className = null;
+				if (i > 0)
+					nav[i - 1].firstChild.className = null;
 			} else
 				nav[i].firstChild.className = null;
 		}
@@ -86,8 +81,8 @@
 
 	window.onhashchange = function(event) {
 		var current = null;
-		for (var i=0; i<nav.length; i++) {
-			if (nav[i].firstChild.getAttribute('href') === window.location.hash)
+		for (var i = 0; i < nav.length; i++) {
+			if (nav[i].firstChild.getAttribute('href') == window.location.hash)
 				current = nav[i].firstChild;
 			else
 				nav[i].firstChild.className = null;
