@@ -58,31 +58,26 @@
 
 	</div>
 	<script>
-	// use png images if svg not supported
-	if (!document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#BasicStructure', '1.1')) {
-		document.getElementById('logo').src = 'i/logo.png';
-		document.getElementById('title').src = 'i/title.png';
-	}
-
 	// nav menu highlight
 	var nav = document.getElementById('nav').children;
 	var headers = document.getElementsByTagName('h2');
 
 	window.onscroll = function(event) {
+		var current = null;
 		for (var i = 0; i < headers.length; i++) {
-			if (i == 0 || headers[i].offsetTop < (window.pageYOffset || document.body.scrollTop) + document.documentElement.clientHeight / 2) {
-				nav[i].firstChild.className = 'current';
-				if (i > 0)
-					nav[i - 1].firstChild.className = null;
-			} else
-				nav[i].firstChild.className = null;
+			if (i == 0 || headers[i].offsetTop < (window.pageYOffset || document.body.scrollTop) + document.documentElement.clientHeight / 2)
+				current = nav[i].firstChild;
+
+			nav[i].firstChild.className = null;
 		}
+		if (current)
+			current.className = 'current';
 	};
 
 	window.onhashchange = function(event) {
 		var current = null;
 		for (var i = 0; i < nav.length; i++) {
-			if (nav[i].firstChild.getAttribute('href') == window.location.hash)
+			if (nav[i].firstChild.getAttribute('href') === window.location.hash)
 				current = nav[i].firstChild;
 			else
 				nav[i].firstChild.className = null;
