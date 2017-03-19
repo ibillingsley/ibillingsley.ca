@@ -1,3 +1,9 @@
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(SourceSansPro-Regular.woff) format('woff');
+}
 body {
 	background-color: #444;
 	color: #bbb;
@@ -13,7 +19,6 @@ body {
 #head, #nav {
 	display: block;
 	box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	margin: 0;
 }
 #head {
@@ -138,7 +143,6 @@ img {
 }
 p img {
 	box-sizing: border-box;
-	-moz-box-sizing: border-box;
 }
 time {
 	display: block;
