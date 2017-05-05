@@ -126,23 +126,23 @@ h2 {
 	color: #999;
 	font-size: 2em;
 }
-h3 {
-	font-size: 1.66666666em;
-}
 h2:first-child {
 	margin-top: 0.3em;
+}
+h3 {
+	font-size: 1.6666em;
 }
 p, ul {
 	line-height: 1.6;
 	margin: 0 0 1.6em;
 }
+ul {
+	list-style-type: circle;
+}
 img {
 	border: none;
 	vertical-align: bottom;
 	max-width: 100%;
-}
-p img {
-	box-sizing: border-box;
 }
 time {
 	display: block;
