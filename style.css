@@ -2,7 +2,10 @@
 	font-family: 'Source Sans Pro';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(fonts/SourceSansPro-Regular.woff) format('woff');
+	font-display: fallback;
+	src: local('Source Sans Pro'), local('SourceSansPro-Regular'),
+	     url(fonts/SourceSansPro-Regular.woff2) format('woff2'),
+	     url(fonts/SourceSansPro-Regular.woff) format('woff');
 }
 body {
 	background-color: #444;
