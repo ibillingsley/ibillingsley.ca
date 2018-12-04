@@ -66,29 +66,30 @@
 		var nav = document.querySelectorAll('#nav a');
 		var headers = document.getElementsByTagName('h2');
 
-		window.onscroll = function(event) {
-			var current = nav[0];
-			for (var i = 0; i < headers.length; i++) {
-				if (headers[i].offsetTop / document.body.scrollHeight < (window.pageYOffset || document.body.scrollTop) / (document.body.scrollHeight - window.innerHeight))
-					current = nav[i];
-
-				nav[i].removeAttribute('class');
+		function highlight(element) {
+			var current = document.querySelector('.current');
+			if (current && current !== element) {
+				current.removeAttribute('class');
 			}
-			current.className = 'current';
+			element.setAttribute('class', 'current');
+		}
+
+		window.onscroll = function(event) {
+			var scrollPosition = document.body.scrollHeight * (window.pageYOffset || document.body.scrollTop) / (document.body.scrollHeight - window.innerHeight);
+			var selected = nav[0];
+			for (var i = 1; i < nav.length && i < headers.length && headers[i].offsetTop < scrollPosition; i++) {
+				selected = nav[i];
+			}
+			highlight(selected);
 		};
 
 		window.onhashchange = function(event) {
-			var current = null;
-			for (var i = 0; i < nav.length; i++) {
-				if (nav[i].getAttribute('href') === window.location.hash)
-					current = nav[i];
-				else
-					nav[i].removeAttribute('class');
-			}
-			if (current)
-				current.className = 'current';
-			else
+			var selected = document.querySelector('#nav a[href="' + window.location.hash + '"]');
+			if (selected) {
+				highlight(selected);
+			} else {
 				window.onscroll();
+			}
 		};
 
 		window.onhashchange();
