@@ -62,31 +62,35 @@
 
 	</div>
 	<script>
+		'use strict';
 		// nav menu highlight
 		var nav = document.querySelectorAll('#nav a');
 		var headers = document.getElementsByTagName('h2');
+		var selected = null;
 
-		function highlight(element) {
-			var current = document.querySelector('.current');
-			if (current && current !== element) {
-				current.removeAttribute('class');
+		function select(element) {
+			if (element !== selected) {
+				if (selected) {
+					selected.className = '';
+				}
+				element.className = 'selected';
+				selected = element;
 			}
-			element.setAttribute('class', 'current');
 		}
 
-		window.onscroll = function(event) {
-			var scrollPosition = document.body.scrollHeight * (window.pageYOffset || document.body.scrollTop) / (document.body.scrollHeight - window.innerHeight);
-			var selected = nav[0];
+		window.onscroll = function() {
+			var scrollPosition = (window.pageYOffset || document.body.scrollTop) * document.body.scrollHeight / (document.body.scrollHeight - window.innerHeight);
+			var current = nav[0];
 			for (var i = 1; i < nav.length && i < headers.length && headers[i].offsetTop < scrollPosition; i++) {
-				selected = nav[i];
+				current = nav[i];
 			}
-			highlight(selected);
+			select(current);
 		};
 
-		window.onhashchange = function(event) {
-			var selected = document.querySelector('#nav a[href="' + window.location.hash + '"]');
-			if (selected) {
-				highlight(selected);
+		window.onhashchange = function() {
+			var current = document.querySelector('#nav a[href="' + window.location.hash + '"]');
+			if (current) {
+				select(current);
 			} else {
 				window.onscroll();
 			}

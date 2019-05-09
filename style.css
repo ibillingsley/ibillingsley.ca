@@ -78,7 +78,7 @@ body {
 		width: 58%;
 		margin: 4% 0 0 -1%;
 	}
-	.current {
+	.selected {
 		background-color: #444;
 	}
 }
