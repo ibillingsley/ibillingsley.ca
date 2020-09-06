@@ -16,6 +16,9 @@ body {
 	margin: 0;
 	padding: 0;
 }
+nav, main, section, article {
+	display: block;
+}
 #side {
 	background-color: #2f2f2f;
 }
@@ -27,7 +30,7 @@ body {
 #head {
 	text-align: center;
 	background-color: #1f1f1f;
-	padding: 5% 0 3%;
+	padding: 5% 0;
 }
 #nav {
 	line-height: 3;
@@ -38,12 +41,8 @@ body {
 	padding: 5% 5% 15%;
 	max-width: 32em;
 }
-#logo {
-	width: 23%;
-}
 #title {
 	width: 35%;
-	margin: 0 0 1% 2%;
 }
 #head a {
 	color: #f65;
@@ -61,7 +60,7 @@ body {
 		width: 20%;
 	}
 	#head {
-		padding: 25% 0 12%;
+		padding: 25% 0;
 	}
 	#main {
 		position: relative;
@@ -71,12 +70,8 @@ body {
 	#nav {
 		height: 100%;
 	}
-	#logo {
-		width: 60%;
-	}
 	#title {
 		width: 58%;
-		margin: 4% 0 0 -1%;
 	}
 	.selected {
 		background-color: #3f3f3f;
@@ -129,7 +124,7 @@ h2 {
 	color: #aaa;
 	font-size: 2em;
 }
-h2:first-child {
+section:first-child h2:first-child {
 	margin-top: 0.3em;
 }
 h3 {
