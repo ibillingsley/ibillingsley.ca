@@ -88,21 +88,25 @@
 		}
 
 		window.onscroll = function() {
-			var scrollPosition = (window.pageYOffset || document.body.scrollTop) * document.body.scrollHeight / (document.body.scrollHeight - window.innerHeight);
-			var current = nav[0];
-			for (var i = 1; i < nav.length && i < headers.length && headers[i].offsetTop < scrollPosition; i++) {
-				current = nav[i];
+			var scrollPosition = window.pageYOffset * document.body.scrollHeight / (document.body.scrollHeight - window.innerHeight);
+			var i = 1;
+			while (i < nav.length && i < headers.length && headers[i].offsetTop < scrollPosition) {
+				i++;
 			}
-			select(current);
+			select(nav[i - 1]);
 		};
 
 		window.onhashchange = function() {
-			var current = document.querySelector('#nav a[href="' + window.location.hash + '"]');
-			if (current) {
-				select(current);
-			} else {
-				window.onscroll();
+			var hash = window.location.hash;
+			if (hash) {
+				for (var i = 0; i < nav.length; i++) {
+					if (nav[i].getAttribute('href') === hash) {
+						select(nav[i]);
+						return;
+					}
+				}
 			}
+			window.onscroll();
 		};
 
 		window.onhashchange();
