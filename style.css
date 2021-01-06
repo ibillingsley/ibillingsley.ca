@@ -8,7 +8,7 @@
 	     url(fonts/SourceSansPro-Regular.woff) format('woff');
 }
 body {
-	background-color: #3f3f3f;
+	background-color: #3a3a3a;
 	color: #bbb;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 112.5%;
@@ -20,7 +20,7 @@ nav, main, section, article {
 	display: block;
 }
 #side {
-	background-color: #2f2f2f;
+	background-color: #2b2b2b;
 }
 #head, #nav {
 	display: block;
@@ -87,7 +87,7 @@ nav, main, section, article {
 		margin: 0 auto 20%;
 	}
 	.selected {
-		background-color: #3f3f3f;
+		background-color: #3a3a3a;
 	}
 }
 @media screen and (min-width: 1280px) {
