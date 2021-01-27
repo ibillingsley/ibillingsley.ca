@@ -58,7 +58,7 @@ nav, main, section, article {
 	display: block;
 	padding: 0 20%;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
 	#side {
 		position: fixed;
 		top: 0;
@@ -90,7 +90,7 @@ nav, main, section, article {
 		background-color: #3a3a3a;
 	}
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1400px) {
 	#side {
 		width: 32%;
 	}
