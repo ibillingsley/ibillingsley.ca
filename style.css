@@ -73,9 +73,8 @@ nav, main, section, article {
 		width: 58%;
 	}
 	#main {
-		position: relative;
 		width: 70%;
-		left: 20%;
+		margin-left: 20%;
 	}
 	#nav {
 		height: 100%;
@@ -85,6 +84,7 @@ nav, main, section, article {
 		width: 60%;
 		height: auto;
 		margin: 0 auto 20%;
+		aspect-ratio: 6 / 5;
 	}
 	.selected {
 		background-color: #3a3a3a;
@@ -109,7 +109,7 @@ nav, main, section, article {
 	}
 	#main {
 		width: 58%;
-		left: 32%;
+		margin-left: 32%;
 	}
 	#nav a {
 		padding: 0 30%;
@@ -154,6 +154,8 @@ img {
 	border: none;
 	vertical-align: bottom;
 	max-width: 100%;
+	height: auto;
+	aspect-ratio: attr(width) / attr(height);
 }
 time {
 	display: block;
