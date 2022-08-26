@@ -1,16 +1,16 @@
 @font-face {
-	font-family: 'Source Sans Pro';
+	font-family: "Source Sans Pro";
 	font-style: normal;
 	font-weight: 400;
 	font-display: fallback;
-	src: local('Source Sans Pro'), local('SourceSansPro-Regular'),
-	     url(fonts/SourceSansPro-Regular.woff2) format('woff2'),
-	     url(fonts/SourceSansPro-Regular.woff) format('woff');
+	src: local("Source Sans Pro"), local("SourceSansPro-Regular"),
+	     url(fonts/SourceSansPro-Regular.woff2) format("woff2"),
+	     url(fonts/SourceSansPro-Regular.woff) format("woff");
 }
 body {
 	background-color: #3a3a3a;
 	color: #bbb;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
 	font-size: 112.5%;
 	line-height: 1;
 	margin: 0;
@@ -159,11 +159,26 @@ img {
 	vertical-align: bottom;
 	max-width: 100%;
 	height: auto;
-	aspect-ratio: attr(width) / attr(height);
 }
 time {
 	display: block;
 	color: #aaa;
 	margin: -1.1em 0 1.1em;
 	white-space: nowrap;
+}
+.button {
+	padding: 0.5em 1.2em;
+	background-color: #fa5;
+	color: #000;
+	border-radius: 1.2em;
+}
+.button:hover {
+	background-color: #f85;
+	color: #000;
+}
+.button:active {
+	background-color: #f65;
+}
+.rounded {
+	border-radius: 1.2em;
 }

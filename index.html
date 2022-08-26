@@ -46,7 +46,7 @@
 			<article>
 				<h3 id="humble-new-tab-page">Humble New Tab Page</h3>
 				<p>Customizable, lightweight new tab page.</p>
-				<p><a href="https://github.com/ibillingsley/HumbleNewTabPage#screenshots"><img src="images/hntp1.png" alt="screenshot" width="568" height="355"></a></p>
+				<p><a href="https://github.com/ibillingsley/HumbleNewTabPage#screenshots"><img class="rounded" src="images/hntp1.png" alt="screenshot" width="568" height="355"></a></p>
 				<h4>Features</h4>
 				<ul>
 					<li>Bookmarks, apps, most visited, recently closed, weather and more</li>
@@ -54,17 +54,17 @@
 					<li>Highly customizable</li>
 					<li>Fast loading and lightweight</li>
 				</ul>
-				<p><a href="https://chrome.google.com/webstore/detail/mfgdmpfihlmdekaclngibpjhdebndhdj">Download for Chrome</a></p>
-				<p><a href="https://addons.mozilla.org/firefox/addon/humble-new-tab/">Download for Firefox</a></p>
+				<p><a class="button" href="https://chrome.google.com/webstore/detail/mfgdmpfihlmdekaclngibpjhdebndhdj">Download for Chrome</a></p>
+				<p><a class="button" href="https://addons.mozilla.org/firefox/addon/humble-new-tab/">Download for Firefox</a></p>
 				<p>This extension replaces your new tab page. Drag and drop or right-click to edit the page. The font, colors, background, and more can be customized.</p>
 				<p>The source code is available <a href="https://github.com/ibillingsley/HumbleNewTabPage">on GitHub</a> under the MIT license.</p>
 				<p><a href="https://github.com/ibillingsley/HumbleNewTabPage#changelog">Changelog</a></p>
 			</article>
 			<article>
-				<h3 id="games">Games</h3>
-				<iframe src="https://itch.io/embed/1672695?dark=true&bg_color=3a3a3a&border_color=3a3a3a" width="552" height="167" loading="lazy">
-					<a href="https://quodroc.itch.io/one-slime-army">One Slime Army</a>
-				</iframe>
+				<h3 id="one-slime-army">One Slime Army</h3>
+				<p>An arcade endless wave survival game for the <a href="https://wasm4.org/">WASM-4</a> fantasy console written in <a href="https://ziglang.org/">Zig</a>.</p>
+				<p><a href="https://quodroc.itch.io/one-slime-army"><img class="rounded" src="images/one-slime-army.png" alt="screenshot" width="320" height="320"></a></p>
+				<p><a class="button" href="https://quodroc.itch.io/one-slime-army">Play in browser</a></p>
 			</article>
 		</section>
 		<section>
@@ -93,7 +93,7 @@
 			}
 		}
 
-		window.onscroll = function() {
+		window.onscroll = function () {
 			var scrollPosition = window.pageYOffset * document.body.scrollHeight / (document.body.scrollHeight - window.innerHeight);
 			var i = 1;
 			while (i < nav.length && i < headers.length && headers[i].offsetTop < scrollPosition) {
@@ -102,7 +102,7 @@
 			select(nav[i - 1]);
 		};
 
-		window.onhashchange = function() {
+		window.onhashchange = function () {
 			var hash = window.location.hash;
 			if (hash) {
 				for (var i = 0; i < nav.length; i++) {
