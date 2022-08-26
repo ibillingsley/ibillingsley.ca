@@ -182,3 +182,9 @@ time {
 .rounded {
 	border-radius: 1.2em;
 }
+.hover-swap:not(:hover) :last-child {
+	display: none;
+}
+.hover-swap:hover :first-child {
+	display: none;
+}
