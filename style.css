@@ -169,11 +169,15 @@ time {
 	margin: -1.1em 0 1.1em;
 	white-space: nowrap;
 }
+.rounded {
+	border-radius: 1.12em;
+}
 .button {
-	padding: 0.5em 1.2em;
+	display: inline-block;
+	padding: 0.32em 1.2em;
 	background-color: #fa5;
 	color: #000;
-	border-radius: 1.2em;
+	border-radius: 1.12em;
 }
 .button:hover {
 	background-color: #f85;
@@ -182,8 +186,8 @@ time {
 .button:active {
 	background-color: #f65;
 }
-.rounded {
-	border-radius: 1.2em;
+br + .button {
+	margin-top: 1.2em;
 }
 .hover-swap:not(:hover) :last-child {
 	display: none;
