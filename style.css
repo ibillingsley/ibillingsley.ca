@@ -142,17 +142,17 @@ h2 {
 	font-size: 2em;
 }
 section:first-child h2:first-child {
-	margin-top: 0.3em;
+	margin-top: 0.305555556em;
 }
 h3 {
-	font-size: 1.6666em;
+	font-size: 1.66666667em;
 }
 h4, h5, h6 {
-	margin-top: 1.6em;
+	margin-top: 1.55555556em;
 }
 p, ul {
-	line-height: 1.6;
-	margin: 0 0 1.6em;
+	line-height: 1.55555556;
+	margin: 0 0 1.55555556em;
 }
 ul {
 	list-style-type: circle;
@@ -166,18 +166,18 @@ img {
 time {
 	display: block;
 	color: #aaa;
-	margin: -1.1em 0 1.1em;
+	margin: -1.11111111em 0 1.11111111em;
 	white-space: nowrap;
 }
 .rounded {
-	border-radius: 1.12em;
+	border-radius: 1.11111111em;
 }
 .button {
 	display: inline-block;
-	padding: 0.32em 1.2em;
+	padding: 0.333333333em 1.11111111em;
 	background-color: #fa5;
 	color: #000;
-	border-radius: 1.12em;
+	border-radius: 1.11111111em;
 }
 .button:hover {
 	background-color: #f85;
@@ -187,7 +187,7 @@ time {
 	background-color: #f65;
 }
 br + .button {
-	margin-top: 1.2em;
+	margin-top: 1.11111111em;
 }
 .hover-swap:not(:hover) :last-child {
 	display: none;
