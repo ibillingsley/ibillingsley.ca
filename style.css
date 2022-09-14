@@ -54,6 +54,7 @@ iframe {
 #title {
 	display: block;
 	width: 100%;
+	overflow: visible;
 }
 #head a {
 	display: inline-block;
@@ -74,10 +75,10 @@ iframe {
 		width: 20%;
 	}
 	#head {
-		padding: 25% 0;
+		padding: 25% 0 20%;
 	}
 	#head a {
-		width: 58%;
+		width: 60%;
 	}
 	#main {
 		width: 70%;
@@ -92,7 +93,7 @@ iframe {
 	}
 	#logo {
 		display: block;
-		width: 60%;
+		width: 58%;
 		height: auto;
 		margin: 0 auto 20%;
 		aspect-ratio: 6 / 5;
