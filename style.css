@@ -166,10 +166,14 @@ ul {
 	list-style-type: circle;
 }
 img {
+	display: inline-block;
 	border: none;
 	vertical-align: bottom;
 	max-width: 100%;
 	height: auto;
+}
+img[loading=lazy] {
+	background-color: #000;
 }
 time {
 	display: block;
