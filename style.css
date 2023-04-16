@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2;
 	margin: 2.8em 0 0.8em;
 	font-weight: normal;
-	scroll-margin-top: 2em;
+	scroll-margin-top: 1em;
 }
 h2 {
 	color: #aaa;
