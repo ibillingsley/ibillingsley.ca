@@ -9,7 +9,7 @@
 }
 body {
 	background-color: #3a3a3a;
-	color: #bbb;
+	color: #ccc;
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 112.5%;
 	line-height: 1;
@@ -138,14 +138,14 @@ a:active {
 	outline: none;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: #ddd;
+	color: #fff;
 	line-height: 1.2;
 	margin: 2.8em 0 0.8em;
 	font-weight: normal;
 	scroll-margin-top: 1em;
 }
 h2 {
-	color: #aaa;
+	color: #bbb;
 	font-size: 1.94444444em;
 }
 section:first-child h2:first-child {
@@ -178,7 +178,7 @@ img[loading=lazy] {
 }
 time {
 	display: block;
-	color: #aaa;
+	color: #bbb;
 	margin: -1em 0 1em;
 	white-space: nowrap;
 }
@@ -187,7 +187,7 @@ time {
 }
 .button {
 	display: inline-block;
-	padding: 0.333333333em 1.11111111em;
+	padding: 0.33333333em 1.11111111em;
 	background-color: #fa5;
 	color: #000;
 	border-radius: 1.11111111em;
