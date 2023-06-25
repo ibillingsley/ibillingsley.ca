@@ -8,6 +8,7 @@
 	     url(fonts/SourceSansPro-Regular.woff) format("woff");
 }
 body {
+	color-scheme: dark;
 	background-color: #3a3a3a;
 	color: #ccc;
 	font-family: "Source Sans Pro", sans-serif;
@@ -18,10 +19,6 @@ body {
 }
 nav, main, section, article {
 	display: block;
-}
-iframe {
-	width: 100%;
-	border: none;
 }
 #side {
 	background-color: #2b2b2b;
@@ -54,6 +51,7 @@ iframe {
 #title {
 	display: block;
 	width: 100%;
+	fill: #f65;
 	overflow: visible;
 }
 #head a {
@@ -207,4 +205,47 @@ br + .button {
 }
 .hover-swap:hover :first-child {
 	display: none;
+}
+@media (prefers-color-scheme: light) {
+	body {
+		color-scheme: light;
+		background-color: #eef;
+		color: #111;
+	}
+	#side {
+		background-color: #dde;
+	}
+	#head {
+		background-color: #ccd;
+	}
+	#logo {
+		box-shadow: 0 0 0 0.2vw #111;
+		border-radius: 0.6vw;
+	}
+	#title {
+		fill: #111;
+	}
+	a {
+		color: #b10;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: #000;
+	}
+	h2 {
+		color: #555;
+	}
+	time {
+		color: #555;
+	}
+	.button {
+		background-color: #fa9;
+	}
+	.button:hover:not(:active) {
+		background-color: #fba;
+	}
+}
+@media screen and (min-width: 800px) and (prefers-color-scheme: light) {
+	.selected {
+		background-color: #eef;
+	}
 }
