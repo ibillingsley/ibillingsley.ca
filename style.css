@@ -181,7 +181,9 @@ time {
 	border-radius: 1.11111111em;
 }
 .button {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	vertical-align: middle;
 	padding: 0.33333333em 1.11111111em;
 	background-color: #fa5;
 	color: #000;
@@ -198,7 +200,7 @@ br + .button {
 	margin-top: 1.11111111em;
 }
 .button img {
-	margin: -0.1em 0.3em 0 -0.3em;
+	margin: 0 0.5em 0 -0.4em;
 }
 .hover-swap:not(:hover) :last-child {
 	display: none;
