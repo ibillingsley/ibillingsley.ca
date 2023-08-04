@@ -171,9 +171,6 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-img[loading=lazy] {
-	background-color: #000;
-}
 time {
 	display: block;
 	color: #bbb;
@@ -205,6 +202,9 @@ br + .button {
 }
 .hover-swap:hover :first-child {
 	display: none;
+}
+.hover-swap img {
+	background-color: #000;
 }
 @media (prefers-color-scheme: light) {
 	body {
