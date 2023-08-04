@@ -167,7 +167,7 @@ ul {
 img {
 	display: inline-block;
 	border: none;
-	vertical-align: bottom;
+	vertical-align: middle;
 	max-width: 100%;
 	height: auto;
 }
@@ -196,6 +196,9 @@ time {
 }
 br + .button {
 	margin-top: 1.11111111em;
+}
+.button img {
+	margin: -0.1em 0.3em 0 -0.3em;
 }
 .hover-swap:not(:hover) :last-child {
 	display: none;
