@@ -214,14 +214,14 @@ br + .button {
 @media (prefers-color-scheme: light) {
 	body {
 		color-scheme: light;
-		background-color: #eef;
+		background-color: #fff4f0;
 		color: #111;
 	}
 	#side {
-		background-color: #dde;
+		background-color: #f9ddd2;
 	}
 	#head {
-		background-color: #ccd;
+		background-color: #f4c3b3;
 	}
 	#logo {
 		box-shadow: 0 0 0 0.2vw #111;
@@ -251,6 +251,6 @@ br + .button {
 }
 @media screen and (min-width: 800px) and (prefers-color-scheme: light) {
 	.selected {
-		background-color: #eef;
+		background-color: #fff4f0;
 	}
 }
