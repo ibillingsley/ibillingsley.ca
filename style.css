@@ -214,21 +214,21 @@ br + .button {
 @media (prefers-color-scheme: light) {
 	body {
 		color-scheme: light;
-		background-color: #fff4f0;
+		background-color: #ffeadc;
 		color: #111;
 	}
 	#side {
-		background-color: #f9ddd2;
+		background-color: #f5dac7;
 	}
 	#head {
-		background-color: #f4c3b3;
+		background-color: #ecc9b2;
 	}
 	#logo {
-		box-shadow: 0 0 0 0.2vw #111;
+		box-shadow: 0 0 0 0.2vw #432;
 		border-radius: 0.6vw;
 	}
 	#title {
-		fill: #111;
+		fill: #432;
 	}
 	a {
 		color: #b10;
@@ -237,10 +237,10 @@ br + .button {
 		color: #000;
 	}
 	h2 {
-		color: #555;
+		color: #543;
 	}
 	time {
-		color: #555;
+		color: #543;
 	}
 	.button {
 		background-color: #fa9;
@@ -251,6 +251,6 @@ br + .button {
 }
 @media screen and (min-width: 800px) and (prefers-color-scheme: light) {
 	.selected {
-		background-color: #fff4f0;
+		background-color: #ffeadc;
 	}
 }
