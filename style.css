@@ -8,7 +8,6 @@
 	     url(fonts/SourceSansPro-Regular.woff) format("woff");
 }
 body {
-	color-scheme: dark;
 	background-color: #3a3a3a;
 	color: #ccc;
 	font-family: "Source Sans Pro", sans-serif;
@@ -213,7 +212,6 @@ br + .button {
 }
 @media (prefers-color-scheme: light) {
 	body {
-		color-scheme: light;
 		background-color: #ffeadc;
 		color: #111;
 	}
@@ -248,9 +246,9 @@ br + .button {
 	.button:hover:not(:active) {
 		background-color: #fba;
 	}
-}
-@media screen and (min-width: 800px) and (prefers-color-scheme: light) {
-	.selected {
-		background-color: #ffeadc;
+	@media screen and (min-width: 800px) {
+		.selected {
+			background-color: #ffeadc;
+		}
 	}
 }
