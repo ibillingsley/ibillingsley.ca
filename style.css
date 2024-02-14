@@ -43,6 +43,7 @@ nav, main, section, article {
 #main {
 	padding: 5% 5% 15%;
 	max-width: 32em;
+	text-wrap: pretty;
 }
 #logo {
 	display: none;
