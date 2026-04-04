@@ -146,9 +146,6 @@ h2 {
 	color: #bbb;
 	font-size: 1.94444444em;
 }
-section:first-child h2:first-child {
-	margin-top: 0.2em;
-}
 h3 {
 	font-size: 1.66666667em;
 }
@@ -156,6 +153,9 @@ h4, h5, h6 {
 	font-size: 1em;
 	line-height: 1.55555556;
 	margin: 0 0 0.5em;
+}
+section:first-child h2:first-child {
+	margin-top: 0.2em;
 }
 p, ul {
 	line-height: 1.55555556;
@@ -176,6 +176,13 @@ time {
 	color: #bbb;
 	margin: -1em 0 1em;
 	white-space: nowrap;
+}
+pre {
+	white-space: pre-wrap;
+}
+summary {
+	display: inline list-item;
+	cursor: pointer;
 }
 .rounded {
 	border-radius: 1.11111111em;
