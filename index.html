@@ -54,8 +54,8 @@
 				<p>This extension replaces your new tab page. Drag and drop or right-click to edit the page. The font, colors, background, and more can be customized.</p>
 				<p>The source code is available <a href="https://github.com/ibillingsley/HumbleNewTabPage">on GitHub</a> under the MIT license.</p>
 				<details id="changelog">
-					<summary>Changelog</summary>
-					<pre></pre>
+					<summary><h4>Changelog</h4></summary>
+					<div></div>
 				</details>
 			</article>
 		</section>
@@ -90,34 +90,25 @@
 		const headers = document.getElementsByTagName('h2');
 		let selected = null;
 
-		function select(element) {
-			if (element !== selected) {
-				if (selected) {
-					selected.className = '';
-				}
-				element.className = 'selected';
-				selected = element;
-			}
+		function select(a) {
+			if (a === selected) return;
+			if (selected) selected.className = '';
+			a.className = 'selected';
+			selected = a;
 		}
 
 		window.onscroll = function () {
-			const scrollPosition = window.pageYOffset * document.body.scrollHeight / (document.body.scrollHeight - window.innerHeight);
+			const scrollPos = pageYOffset * document.body.scrollHeight / (document.body.scrollHeight - innerHeight);
 			let i = 1;
-			while (i < nav.length && i < headers.length && headers[i].offsetTop < scrollPosition) {
-				i++;
-			}
+			while (i < nav.length && i < headers.length && headers[i].offsetTop < scrollPos) i++;
 			select(nav[i - 1]);
 		};
 
 		window.onhashchange = function () {
-			const hash = window.location.hash;
-			if (hash) {
-				for (let i = 0; i < nav.length; i++) {
-					if (nav[i].getAttribute('href') === hash) {
-						select(nav[i]);
-						return;
-					}
-				}
+			if (location.hash) {
+				for (const a of nav)
+					if (a.getAttribute('href') === location.hash)
+						return select(a);
 			}
 			window.onscroll();
 		};
@@ -129,7 +120,12 @@
 			this.ontoggle = null;
 			fetch('https://raw.githubusercontent.com/ibillingsley/HumbleNewTabPage/refs/heads/master/README.md')
 				.then(response => response.text())
-				.then(text => this.lastElementChild.textContent = text.slice(text.indexOf('### Version')).replaceAll('### ', '\n'));
+				.then(text => this.lastElementChild.innerHTML = '<br>' + text.slice(text.indexOf('### Version'))
+					.replaceAll('<', '&lt;')
+					.replaceAll('### ', '</ul><h5>')
+					.replaceAll(' - ', '&ensp;&ndash;&ensp;')
+					.replaceAll('\r\n\r\n- ', '</h5><ul><li>')
+					.replaceAll('\r\n- ', '<li>'));
 		};
 	</script>
 </body>
