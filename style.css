@@ -184,6 +184,9 @@ summary {
 	display: inline list-item;
 	cursor: pointer;
 }
+summary h4 {
+	display: inline;
+}
 .rounded {
 	border-radius: 1.11111111em;
 }
